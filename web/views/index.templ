@@ -1,0 +1,11 @@
+package views
+
+import "goi18n/internal/i18n"
+
+templ IndexView(t i18n.Translation) {
+	@Base(t) {
+		<a href={ templ.URL("/" + t.LanguageSwitch + "/") } alt="">
+			{ t.LanguageSwitchLabel }
+		</a>
+	}
+}
